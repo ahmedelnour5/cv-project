@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WorkExpEntry from './WorkExpEntry';
 import Header from './Header';
+import uniqid from 'uniqid';
 
 class WorkExp extends Component {
   constructor(props) {
@@ -10,14 +11,15 @@ class WorkExp extends Component {
   render() {
     const { id, onChange, onDelete, workExp, onAdd } = this.props;
 
-    const workExpList = workExp.map((workExpItem) => (
+    const workExpList = workExp.map((experience) => (
       <WorkExpEntry
-        key={workExpItem.id}
-        workExpEntry={workExpItem}
+        key={experience.id}
+        id={experience.id}
+        experience={experience}
         onChange={onChange}
         onDelete={onDelete}
         onAdd={onAdd}
-      />
+      ></WorkExpEntry>
     ));
 
     return (

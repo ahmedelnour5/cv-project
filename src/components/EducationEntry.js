@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React, { Component } from 'react';
 import Input from './Input';
 import Buttons from './Buttons';
 
@@ -15,35 +15,35 @@ class EducationEntry extends Component {
         <Input
           type="text"
           placeholder="Major"
-          name="Major"
+          name="major"
           onChange={(e) => onChange(e, id)}
           value={educationEntry.major}
         />
         <Input
           type="text"
           placeholder="School"
-          name="School"
+          name="school"
           onChange={(e) => onChange(e, id)}
           value={educationEntry.school}
         />
         <Input
           type="text"
           placeholder="Start Date"
-          name="Start Date"
+          name="startDate"
           onChange={(e) => onChange(e, id)}
           value={educationEntry.startDate}
         />
         <Input
           type="text"
           placeholder="End Date"
-          name="End Date"
+          name="endDate"
           onChange={(e) => onChange(e, id)}
           value={educationEntry.endDate}
         />
         <Input
           type="text"
           placeholder="Description"
-          name="Description"
+          name="description"
           onChange={(e) => onChange(e, id)}
           value={educationEntry.description}
         />

@@ -1,5 +1,5 @@
-import {Component, React} from 'react';
-import EducationEntry from './EducationEntry'
+import React, { Component } from 'react';
+import EducationEntry from './EducationEntry';
 import Header from './Header';
 
 class Education extends Component {
@@ -8,27 +8,25 @@ class Education extends Component {
   }
 
   render() {
-    const {id,onChange, onDelete, onAdd, education}
+    const { id, onChange, onDelete, onAdd, education } = this.props;
 
-    const educationList = education.map((educationEntry)=> 
+    const educationList = education.map((educationEntry) => (
       <EducationEntry
         key={educationEntry.id}
+        id={educationEntry.id}
         educationEntry={educationEntry}
         onChange={onChange}
         onDelete={onDelete}
         onAdd={onAdd}
       />
-    
-    
-    )
-    return(
+    ));
+    return (
       <section className="eduSection">
-        <Header title="Education"/>
+        <Header title="Education" />
         {educationList}
       </section>
-
     );
   }
 }
 
-export default Education; 
+export default Education;

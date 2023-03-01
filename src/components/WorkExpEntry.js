@@ -8,48 +8,45 @@ class WorkExpEntry extends Component {
   }
 
   render() {
-    const { id, workExpEntry, onChange, onDelete, onAdd } = this.props;
+    const { id, experience, onChange, onDelete, onAdd } = this.props;
     return (
       <div className="entryContainer expEntry">
         <Input
           onChange={(e) => onChange(e, id)}
           type="text"
           placeholder="Company"
-          name="Company"
-          value={workExpEntry.company}
+          name="company"
+          value={experience.company}
         />
         <Input
           onChange={(e) => onChange(e, id)}
           type="text"
           placeholder="Position"
-          name="Position"
-          value={workExpEntry.position}
+          name="position"
+          value={experience.position}
         />
         <Input
           onChange={(e) => onChange(e, id)}
           type="text"
           placeholder="Start Date"
-          name="Start Date"
-          value={workExpEntry.startDate}
+          name="startDate"
+          value={experience.startDate}
         />
         <Input
           onChange={(e) => onChange(e, id)}
           type="text"
           placeholder="End Date"
-          name="End Date"
-          value={workExpEntry.endDate}
+          name="endDate"
+          value={experience.endDate}
         />
         <Input
           onChange={(e) => onChange(e, id)}
           type="text"
-          placeholder="Company"
-          name="Company"
-          value={workExpEntry.description}
+          placeholder="Description"
+          name="description"
+          value={experience.description}
         />
-        <Buttons
-          onDelete={(e) => onDelete(e, id)}
-          onAdd={(e) => onAdd(e, id)}
-        />
+        <Buttons onDelete={(e) => onDelete(e, id)} onAdd={onAdd} />
       </div>
     );
   }

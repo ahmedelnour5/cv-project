@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Input from './Input';
 
 class PersonalDetails extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class PersonalDetails extends Component {
   }
 
   render() {
-    const { id, onChange, pdEntry } = this.props;
+    const { onChange, pdEntry } = this.props;
     return (
       <section className="personalDetsEntry">
         <Header title="Personal Details" />
@@ -15,43 +16,43 @@ class PersonalDetails extends Component {
           <Input
             onChange={(e) => onChange(e)}
             type="Text"
-            name="Name"
-            placeHolder="Name"
+            name="name"
+            placeholder="Name"
             value={pdEntry.name}
           />
           <Input
             onChange={(e) => onChange(e)}
             type="Text"
-            name="Title"
-            placeHolder="Title"
+            name="title"
+            placeholder="Title"
             value={pdEntry.title}
           />
           <Input
             onChange={(e) => onChange(e)}
             type="Text"
-            name="Phone Number"
-            placeHolder="Phone Number"
+            name="phoneNumber"
+            placeholder="Phone Number"
             value={pdEntry.phoneNumber}
           />
           <Input
             onChange={(e) => onChange(e)}
             type="Email"
-            name="Email"
-            placeHolder="Email"
+            name="email"
+            placeholder="Email"
             value={pdEntry.email}
           />
           <Input
             onChange={(e) => onChange(e)}
             type="Text"
-            name="Location"
-            placeHolder="Location"
-            value={pdEntry.Location}
+            name="location"
+            placeholder="Location"
+            value={pdEntry.location}
           />
           <textarea
             className="pdArea"
             onChange={(e) => onChange(e)}
             type="text"
-            name="Summary"
+            name="summary"
             placeholder="Summary"
             value={pdEntry.summary}
           />

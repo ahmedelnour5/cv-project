@@ -10,8 +10,8 @@ class Form extends Component {
 
   render() {
     const {
-      id,
-      emptyCv,
+      personal,
+      experienceList,
       onChangePersonal,
       onChangeExperience,
       onDeleteExperience,
@@ -19,27 +19,23 @@ class Form extends Component {
       onChangeEdu,
       onDeleteEdu,
       onAddEdu,
+      eduList,
     } = this.props;
 
     return (
       <form className="cvForm">
-        <PersonalDetails
-          pdEntry={emptyCv.personal}
-          onChange={onChangePersonal}
-        />
+        <PersonalDetails pdEntry={personal} onChange={onChangePersonal} />
         <WorkExp
-          id={emptyCv.experience.id}
           onChange={onChangeExperience}
           onDelete={onDeleteExperience}
           onAdd={onAddExperience}
-          workExp={emptyCv.experience}
+          workExp={experienceList}
         />
         <Education
-          id={emptyCv.education.id}
           onChange={onChangeEdu}
           onDelete={onDeleteEdu}
           onAdd={onAddEdu}
-          educationp={emptyCv.education}
+          education={eduList}
         />
       </form>
     );
