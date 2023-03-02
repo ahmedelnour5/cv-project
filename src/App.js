@@ -112,7 +112,7 @@ class App extends Component {
     const updatedExperiences = experiences.filter(
       (experience) => experience.id !== id
     );
-    this.setState({ experiences: updatedExperiences });
+    this.setState({ experiences: [...updatedExperiences] });
   };
 
   onChangeEducation = (e, id) => {
@@ -124,7 +124,7 @@ class App extends Component {
       }
       return education;
     });
-    this.setState({ educations: updatedEdus });
+    this.setState({ educations: [...updatedEdus] });
   };
 
   onAddEducation = (e) => {
@@ -153,22 +153,23 @@ class App extends Component {
   };
 
   render() {
-    const { personal, experiences, onDeleteExperience, educations } =
-      this.state;
+    const { personal, experiences, educations } = this.state;
     return (
       <div className="cvContainer">
-        <Form
-          personal={personal}
-          onChangePersonal={this.handleChangePersonal}
-          experienceList={experiences}
-          onChangeExperience={this.onChangeExperience}
-          onAddExperience={this.onAddExperience}
-          onDeleteExperience={this.onDeleteExperience}
-          eduList={educations}
-          onChangeEdu={this.onChangeEducation}
-          onAddEdu={this.onAddEducation}
-          onDeleteEdu={this.onDeleteEducation}
-        />
+        <div className="formContainer">
+          <Form
+            personal={personal}
+            onChangePersonal={this.handleChangePersonal}
+            experienceList={experiences}
+            onChangeExperience={this.onChangeExperience}
+            onAddExperience={this.onAddExperience}
+            onDeleteExperience={this.onDeleteExperience}
+            eduList={educations}
+            onChangeEdu={this.onChangeEducation}
+            onAddEdu={this.onAddEducation}
+            onDeleteEdu={this.onDeleteEducation}
+          />
+        </div>
       </div>
     );
   }

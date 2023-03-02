@@ -43,30 +43,84 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   color: black;
 }
 /***************************************************/
 .cvContainer {
-  margin: 0 auto;
-  max-width: 1200px;
-  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 40px;
+  gap: 40px;
 }
 /***********************form styles****************************/
+.formContainer {
+  width: 595px;
+}
 .cvForm {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
+  grid-gap: 25px;
+  gap: 25px;
 }
-/***************************************************/
 
-/***********************personalDetails section****************************/
+.sectionHeader {
+  margin-bottom: 5px;
+}
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
 .entryContainer {
   display: flex;
   flex-direction: column;
+  grid-gap: 5px;
+  gap: 5px;
 }
+button {
+  color: black;
+  border: 1px solid grey;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.btn-group {
+  display: flex;
+  grid-gap: 8px;
+  gap: 8px;
+}
+/***************************************************/
