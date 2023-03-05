@@ -9,13 +9,13 @@ class PersonalView extends Component {
     const { personalInfo } = this.props;
     return (
       <header className="viewHeader">
-        <div className="pdHeading">
-          <h1 className="nameHeader">{personalInfo.name}</h1>
-          <h2 className="titleHeader">{personalInfo.title}</h2>
+        <div className="headingContainer">
+          <h1 className="nameHeading">{personalInfo.name}</h1>
+          <h2 className="titleHeading">{personalInfo.title}</h2>
         </div>
-        <div className="pdDetails">
-          <ul className="detailsList">
-            <li>{personalInfo.number}</li>
+        <div className="pdContact">
+          <ul className="contactList">
+            <li>{personalInfo.phoneNumber}</li>
             <li>{personalInfo.email}</li>
             <li>{personalInfo.location}</li>
           </ul>

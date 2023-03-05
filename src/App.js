@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import Form from './components/Form';
 import uniqid from 'uniqid';
+import View from './components/View';
 
 class App extends Component {
   constructor(props) {
@@ -170,6 +171,11 @@ class App extends Component {
             onDeleteEdu={this.onDeleteEducation}
           />
         </div>
+        <View
+          personal={personal}
+          experience={experiences}
+          educations={educations}
+        />
       </div>
     );
   }

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PersonalView from './PersonalView';
+import ExperienceView from './ExperienceView';
+import ExpViewItem from './expViewItem';
+import EducationView from './EducationView';
 
 class View extends Component {
   constructor(props) {
@@ -7,10 +10,13 @@ class View extends Component {
   }
 
   render() {
-    const { personal } = this.props;
+    const { personal, experience, educations } = this.props;
     return (
-      <div className="View">
+      <div className="viewContainer">
         <PersonalView personalInfo={personal} />
+        <div>{personal.summary}</div>
+        <ExperienceView experience={experience} />
+        <EducationView educations={educations} />
       </div>
     );
   }

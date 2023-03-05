@@ -38,7 +38,7 @@
   }
 }
 
-/*universal styles*/
+/**************************universal styles**************************/
 *,
 *::before,
 *::after {
@@ -46,10 +46,12 @@
   margin: 0;
   padding: 0;
 }
-
+h1,
+h2 {
+  margin: 0;
+}
 h2 {
   font-size: 1.4rem;
-  margin: 0;
 }
 
 body {
@@ -58,7 +60,7 @@ body {
   font-size: 0.9rem;
   color: black;
 }
-/***************************************************/
+/***********************cvContainer styles****************************/
 .cvContainer {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +69,8 @@ body {
   gap: 40px;
 }
 /***********************form styles****************************/
-.formContainer {
+.formContainer,
+.viewContainer {
   width: 595px;
 }
 .cvForm {
@@ -83,6 +86,14 @@ body {
 .sectionHeader {
   margin-bottom: 5px;
 }
+
+.entryContainer {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 5px;
+  gap: 5px;
+}
+
 button,
 input,
 textarea {
@@ -102,17 +113,18 @@ textarea {
   padding: 5px;
 }
 
-.entryContainer {
-  display: flex;
-  flex-direction: column;
-  grid-gap: 5px;
-  gap: 5px;
+textarea {
+  resize: none;
+  width: 100%;
 }
+
+/***********************buttons****************************/
+
 button {
   color: black;
   border: 1px solid grey;
   padding: 4px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.15s;
@@ -123,4 +135,100 @@ button {
   grid-gap: 8px;
   gap: 8px;
 }
-/***************************************************/
+
+.Delete {
+  background-color: #d61f3e;
+  color: white;
+}
+
+.Add {
+  background-color: #00893e;
+  color: white;
+}
+/***********************form styles****************************/
+
+/***********************view styles****************************/
+.viewContainer {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  min-width: 595px;
+  height: 842px;
+  border-radius: 2px;
+  box-shadow: 5px 0 6px 0 hsl(0deg 0% 0% / 20%);
+  grid-gap: 16px;
+  gap: 16px;
+}
+/***********************viewHeader styles****************************/
+.viewHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #82a0aa;
+}
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+}
+.nameHeading {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2a272a;
+}
+
+.titleHeading {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: #4b4a54;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/***********************view styles****************************/
+.expView {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-gap: 8px;
+  gap: 8px;
+}
+
+.expItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-gap: 2px;
+  gap: 2px;
+}
+
+.itemHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  grid-gap: 2px;
+  gap: 2px;
+}
+
+/***********************view styles****************************/
